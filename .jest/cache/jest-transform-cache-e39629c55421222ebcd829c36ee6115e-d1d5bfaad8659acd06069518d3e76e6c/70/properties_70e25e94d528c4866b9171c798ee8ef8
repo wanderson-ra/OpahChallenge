@@ -1,0 +1,17 @@
+c75bc77d059b5631a11d28db5f3b4d13
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.properties = void 0;
+
+var _reactNativeConfig = _interopRequireDefault(require("react-native-config"));
+
+var properties = {
+  startWars: {
+    baseUrl: _reactNativeConfig.default.STAR_WARS_API_BASE_URL
+  }
+};
+exports.properties = properties;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInByb3BlcnRpZXMudHMiXSwibmFtZXMiOlsicHJvcGVydGllcyIsInN0YXJ0V2FycyIsImJhc2VVcmwiLCJDb25maWciLCJTVEFSX1dBUlNfQVBJX0JBU0VfVVJMIl0sIm1hcHBpbmdzIjoiOzs7Ozs7O0FBQUE7O0FBRU8sSUFBTUEsVUFBVSxHQUFHO0FBQ3RCQyxFQUFBQSxTQUFTLEVBQUU7QUFDUEMsSUFBQUEsT0FBTyxFQUFFQywyQkFBT0M7QUFEVDtBQURXLENBQW5CIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IENvbmZpZyBmcm9tIFwicmVhY3QtbmF0aXZlLWNvbmZpZ1wiO1xuXG5leHBvcnQgY29uc3QgcHJvcGVydGllcyA9IHtcbiAgICBzdGFydFdhcnM6IHtcbiAgICAgICAgYmFzZVVybDogQ29uZmlnLlNUQVJfV0FSU19BUElfQkFTRV9VUkwsXG4gICAgfSxcbn07XG4iXX0=

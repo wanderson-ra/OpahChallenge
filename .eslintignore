@@ -1,0 +1,7 @@
+dist
+scripts
+coverage
+/*e2e
+reactotron.ts
+/*.js
+/__tests__/__mocks__/*

@@ -1,0 +1,1 @@
+{"version":3,"sources":["jestSetup.js"],"names":["mock"],"mappings":"AAAA,cAAKA,IAAL,CAAU,8BAAV","sourcesContent":["jest.mock('./src/RNGestureHandlerModule');\n"]}

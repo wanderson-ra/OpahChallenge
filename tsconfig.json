@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "commonjs",   
+    "allowJs": true,
+      "jsx": "react-native",
+      "noEmit": true,
+      "isolatedModules": true,
+      "strict": true,
+      "moduleResolution": "node",
+      "resolveJsonModule": true,
+      "allowSyntheticDefaultImports": true,
+      "esModuleInterop": true,
+      "types": ["jest", "node"],
+      "rootDir": "./src",
+      "removeComments": true,
+      "typeRoots": ["./node_modules/@types", "./src/@types"],
+      "experimentalDecorators": true,
+      "emitDecoratorMetadata": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true,
+      "sourceMap": true,
+      "baseUrl": "./src",
+      "paths": {
+          "src/*": ["*"]
+      }
+  },
+  "include": ["./src/**/*"],
+  "exclude": [
+    "node_modules",
+    "babel.config.js",
+    "metro.config.js",
+    "jest.config.js"
+  ]
+}

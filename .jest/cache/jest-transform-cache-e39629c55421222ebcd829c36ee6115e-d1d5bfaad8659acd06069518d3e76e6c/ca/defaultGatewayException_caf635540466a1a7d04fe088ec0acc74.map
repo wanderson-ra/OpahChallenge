@@ -1,0 +1,1 @@
+{"version":3,"sources":["defaultGatewayException.ts"],"names":["DefaultRestGatewayException","BaseException"],"mappings":";;;;;;;;;;;;;;;AAAA;;;;;;IAEaA,2B;;;;;;;;;;;EAAoCC,4B","sourcesContent":["import { BaseException } from \"src/globals/exceptions/baseException\";\n\nexport class DefaultRestGatewayException extends BaseException {}\n"]}

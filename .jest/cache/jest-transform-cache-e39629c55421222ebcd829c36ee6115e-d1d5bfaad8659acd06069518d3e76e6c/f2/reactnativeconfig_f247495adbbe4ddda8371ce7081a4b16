@@ -1,0 +1,11 @@
+652764deae881f9e95bcba87bf7c0b70
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  ENV: "TEST",
+  STAR_WARS_API_BASE_URL: "http://swapi.dev/api"
+};
+exports.default = _default;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInJlYWN0LW5hdGl2ZS1jb25maWcudHMiXSwibmFtZXMiOlsiRU5WIiwiU1RBUl9XQVJTX0FQSV9CQVNFX1VSTCJdLCJtYXBwaW5ncyI6Ijs7OztlQUFlO0FBQ1hBLEVBQUFBLEdBQUcsRUFBRSxNQURNO0FBRVhDLEVBQUFBLHNCQUFzQixFQUFFO0FBRmIsQyIsInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBkZWZhdWx0IHtcbiAgICBFTlY6IFwiVEVTVFwiLFxuICAgIFNUQVJfV0FSU19BUElfQkFTRV9VUkw6IFwiaHR0cDovL3N3YXBpLmRldi9hcGlcIiAgICBcbn07XG4iXX0=

@@ -1,0 +1,99 @@
+e811b22ebb2ff9a66d543d5fe42e0d52
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.remove = exports.get = exports.put = void 0;
+
+var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
+
+var _asyncStorage = _interopRequireDefault(require("@react-native-community/async-storage"));
+
+var _storageExceptionGateway = require("../exceptions/storageExceptionGateway");
+
+var put = function put(key, value) {
+  return _regenerator.default.async(function put$(_context) {
+    while (1) {
+      switch (_context.prev = _context.next) {
+        case 0:
+          _context.prev = 0;
+          _context.next = 3;
+          return _regenerator.default.awrap(_asyncStorage.default.setItem(key, value));
+
+        case 3:
+          _context.next = 8;
+          break;
+
+        case 5:
+          _context.prev = 5;
+          _context.t0 = _context["catch"](0);
+          throw new _storageExceptionGateway.StorageExceptionGateway();
+
+        case 8:
+        case "end":
+          return _context.stop();
+      }
+    }
+  }, null, null, [[0, 5]], Promise);
+};
+
+exports.put = put;
+
+var get = function get(key) {
+  var data;
+  return _regenerator.default.async(function get$(_context2) {
+    while (1) {
+      switch (_context2.prev = _context2.next) {
+        case 0:
+          _context2.prev = 0;
+          _context2.next = 3;
+          return _regenerator.default.awrap(_asyncStorage.default.getItem(key));
+
+        case 3:
+          data = _context2.sent;
+          return _context2.abrupt("return", data);
+
+        case 7:
+          _context2.prev = 7;
+          _context2.t0 = _context2["catch"](0);
+          throw new _storageExceptionGateway.StorageExceptionGateway();
+
+        case 10:
+        case "end":
+          return _context2.stop();
+      }
+    }
+  }, null, null, [[0, 7]], Promise);
+};
+
+exports.get = get;
+
+var remove = function remove(key) {
+  return _regenerator.default.async(function remove$(_context3) {
+    while (1) {
+      switch (_context3.prev = _context3.next) {
+        case 0:
+          _context3.prev = 0;
+          _context3.next = 3;
+          return _regenerator.default.awrap(_asyncStorage.default.removeItem(key));
+
+        case 3:
+          _context3.next = 8;
+          break;
+
+        case 5:
+          _context3.prev = 5;
+          _context3.t0 = _context3["catch"](0);
+          throw new _storageExceptionGateway.StorageExceptionGateway();
+
+        case 8:
+        case "end":
+          return _context3.stop();
+      }
+    }
+  }, null, null, [[0, 5]], Promise);
+};
+
+exports.remove = remove;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN0b3JhZ2VHYXRld2F5LnRzIl0sIm5hbWVzIjpbInB1dCIsImtleSIsInZhbHVlIiwiQXN5bmNTdG9yYWdlIiwic2V0SXRlbSIsIlN0b3JhZ2VFeGNlcHRpb25HYXRld2F5IiwiZ2V0IiwiZ2V0SXRlbSIsImRhdGEiLCJyZW1vdmUiLCJyZW1vdmVJdGVtIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7QUFBQTs7QUFFQTs7QUFFTyxJQUFNQSxHQUFHLEdBQUcsU0FBTkEsR0FBTSxDQUFPQyxHQUFQLEVBQW9CQyxLQUFwQjtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLDRDQUVMQyxzQkFBYUMsT0FBYixDQUFxQkgsR0FBckIsRUFBMEJDLEtBQTFCLENBRks7O0FBQUE7QUFBQTtBQUFBOztBQUFBO0FBQUE7QUFBQTtBQUFBLGdCQUlMLElBQUlHLGdEQUFKLEVBSks7O0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsQ0FBWjs7OztBQVFBLElBQU1DLEdBQUcsR0FBRyxTQUFOQSxHQUFNLENBQU9MLEdBQVA7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLDRDQUVRRSxzQkFBYUksT0FBYixDQUFxQk4sR0FBckIsQ0FGUjs7QUFBQTtBQUVMTyxVQUFBQSxJQUZLO0FBQUEsNENBR0pBLElBSEk7O0FBQUE7QUFBQTtBQUFBO0FBQUEsZ0JBS0wsSUFBSUgsZ0RBQUosRUFMSzs7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxDQUFaOzs7O0FBU0EsSUFBTUksTUFBTSxHQUFHLFNBQVRBLE1BQVMsQ0FBT1IsR0FBUDtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLDRDQUVSRSxzQkFBYU8sVUFBYixDQUF3QlQsR0FBeEIsQ0FGUTs7QUFBQTtBQUFBO0FBQUE7O0FBQUE7QUFBQTtBQUFBO0FBQUEsZ0JBSVIsSUFBSUksZ0RBQUosRUFKUTs7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxDQUFmIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IEFzeW5jU3RvcmFnZSBmcm9tIFwiQHJlYWN0LW5hdGl2ZS1jb21tdW5pdHkvYXN5bmMtc3RvcmFnZVwiO1xuXG5pbXBvcnQgeyBTdG9yYWdlRXhjZXB0aW9uR2F0ZXdheSB9IGZyb20gXCIuLi9leGNlcHRpb25zL3N0b3JhZ2VFeGNlcHRpb25HYXRld2F5XCI7XG5cbmV4cG9ydCBjb25zdCBwdXQgPSBhc3luYyAoa2V5OiBzdHJpbmcsIHZhbHVlOiBzdHJpbmcpOiBQcm9taXNlPHZvaWQ+ID0+IHtcbiAgICB0cnkge1xuICAgICAgICBhd2FpdCBBc3luY1N0b3JhZ2Uuc2V0SXRlbShrZXksIHZhbHVlKTtcbiAgICB9IGNhdGNoIHtcbiAgICAgICAgdGhyb3cgbmV3IFN0b3JhZ2VFeGNlcHRpb25HYXRld2F5KCk7XG4gICAgfVxufTtcblxuZXhwb3J0IGNvbnN0IGdldCA9IGFzeW5jIChrZXk6IHN0cmluZyk6IFByb21pc2U8c3RyaW5nIHwgbnVsbD4gPT4ge1xuICAgIHRyeSB7XG4gICAgICAgIGNvbnN0IGRhdGEgPSBhd2FpdCBBc3luY1N0b3JhZ2UuZ2V0SXRlbShrZXkpO1xuICAgICAgICByZXR1cm4gZGF0YTtcbiAgICB9IGNhdGNoIHtcbiAgICAgICAgdGhyb3cgbmV3IFN0b3JhZ2VFeGNlcHRpb25HYXRld2F5KCk7XG4gICAgfVxufTtcblxuZXhwb3J0IGNvbnN0IHJlbW92ZSA9IGFzeW5jIChrZXk6IHN0cmluZyk6IFByb21pc2U8dm9pZD4gPT4ge1xuICAgIHRyeSB7XG4gICAgICAgIGF3YWl0IEFzeW5jU3RvcmFnZS5yZW1vdmVJdGVtKGtleSk7XG4gICAgfSBjYXRjaCB7XG4gICAgICAgIHRocm93IG5ldyBTdG9yYWdlRXhjZXB0aW9uR2F0ZXdheSgpO1xuICAgIH1cbn07XG4iXX0=
