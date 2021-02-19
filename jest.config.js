@@ -5,6 +5,7 @@ module.exports = {
   coveragePathIgnorePatterns: [
       "exceptions",
       "styles",
+      "types",
       "<rootDir>/node_modules/",
       "<rootDir>/__tests__/__mocks__/",
       "<rootDir>/__tests__/__fixture__/",

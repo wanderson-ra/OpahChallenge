@@ -13,15 +13,15 @@ export type Mode = "light" | "dark";
 
 import { ThemeActionTypes } from "../types";
 
-export interface ThemeTokenAction {
+export interface ThemeAction {
     type: ThemeActionTypes.MODE_THEME;
     mode: Mode;
     theme: DefaultTheme;
 }
 
-export type Action = ThemeTokenAction;
+export type Action = ThemeAction;
 
-export const dispatchThemeAction = (mode: Mode, theme: DefaultTheme): ThemeTokenAction => {
+export const dispatchThemeAction = (mode: Mode, theme: DefaultTheme): ThemeAction => {
     return {
         type: ThemeActionTypes.MODE_THEME,
         mode: mode,
@@ -29,7 +29,7 @@ export const dispatchThemeAction = (mode: Mode, theme: DefaultTheme): ThemeToken
     };
 };
 
-export const save = (mode: Mode) => {
+export const saveMode = (mode: Mode) => {
     return async (dispatch: ThunkDispatch<void, void, AnyAction>): Promise<void> => {
         await SaveStorageUseCase.save(MODE_THEME_KEY, mode);
 

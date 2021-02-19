@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
 import { DefaultTheme } from "styled-components/native";
 
-import { Action, Mode } from "../actions/theme/themeAction";
-import { ThemeActionTypes } from "../actions/types";
+import { Action, Mode } from "../../actions/theme/themeAction";
+import { ThemeActionTypes } from "../../actions/types";
 
 export interface ThemeReducer {
     mode: Mode | undefined;
