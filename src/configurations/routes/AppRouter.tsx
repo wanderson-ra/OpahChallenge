@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { StatusBar } from "react-native";
 import RNBootSplash from "react-native-bootsplash";
 import { useSelector, useDispatch } from "react-redux";
 
