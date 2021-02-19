@@ -1,1 +1,0 @@
-{"version":3,"sources":["react-native-config.ts"],"names":["ENV","STAR_WARS_API_BASE_URL"],"mappings":";;;;eAAe;AACXA,EAAAA,GAAG,EAAE,MADM;AAEXC,EAAAA,sBAAsB,EAAE;AAFb,C","sourcesContent":["export default {\n    ENV: \"TEST\",\n    STAR_WARS_API_BASE_URL: \"http://swapi.dev/api\"    \n};\n"]}

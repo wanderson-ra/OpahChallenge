@@ -1,1 +1,0 @@
-{"version":3,"sources":["storageExceptionGateway.ts"],"names":["StorageExceptionGateway","BaseException"],"mappings":";;;;;;;;;;;;;;;AAAA;;;;;;IAEaA,uB;;;;;;;;;;;EAAgCC,4B","sourcesContent":["import { BaseException } from \"src/globals/exceptions/baseException\";\n\nexport class StorageExceptionGateway extends BaseException {}\n"]}
