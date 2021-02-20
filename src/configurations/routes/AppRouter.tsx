@@ -10,7 +10,6 @@ import { RootState } from "src/store/reducers";
 
 import { BOTTOM_NAVIGATOR } from "src/globals/constants/screens";
 
-import { SwitchMode } from "../../components/switchMode/SwitchMode";
 import { BottomNavigator } from "./bottomNavigator/BottomNavigator";
 
 const AppStack = createStackNavigator();

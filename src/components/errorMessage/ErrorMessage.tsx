@@ -4,9 +4,7 @@ import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
 import { useTheme } from "styled-components/native";
 
-import { strings } from "src/utils/strings";
-
-import { Container, Title, Message } from "./styles";
+import { Container, Message } from "./styles";
 
 import { Button } from "../button/Button";
 
