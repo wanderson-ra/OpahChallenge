@@ -1,6 +1,6 @@
 import { Platform } from "react-native";
 import { isIphoneX } from "react-native-iphone-x-helper";
-import { heightPercentageToDP as height, widthPercentageToDP as width } from "react-native-responsive-screen";
+import { heightPercentageToDP as height } from "react-native-responsive-screen";
 
 export const metrics = {
     font: {
