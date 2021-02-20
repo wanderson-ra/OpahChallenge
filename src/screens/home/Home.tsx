@@ -8,7 +8,9 @@ import { RootState } from "src/store/reducers";
 
 import { SwitchMode } from "src/components/switchMode/SwitchMode";
 
-import { Container } from "./styles";
+import { Container, ScrollContainer, SwitchWrapper } from "./styles";
+
+import { FilmsCarousel } from "./components/filmsCarousel/FilmsCarousel";
 
 export const Home: React.FC = () => {
     const theme = useTheme();
@@ -16,11 +18,18 @@ export const Home: React.FC = () => {
 
     return (
         <Container>
-            <SwitchMode />
             <StatusBar
                 backgroundColor={theme.navigation.statusBar}
                 barStyle={mode === "dark" ? "light-content" : "dark-content"}
             />
+
+            <SwitchWrapper>
+                <SwitchMode />
+            </SwitchWrapper>
+
+            <ScrollContainer>
+                <FilmsCarousel />
+            </ScrollContainer>
         </Container>
     );
 };

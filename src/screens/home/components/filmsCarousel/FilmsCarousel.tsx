@@ -1,0 +1,46 @@
+import React, { useCallback, useState } from "react";
+import { widthPercentageToDP as width } from "react-native-responsive-screen";
+import Carousel from "react-native-snap-carousel";
+
+import { Film } from "src/domains/films";
+
+import { Container, WrapperCarousel } from "./styles";
+
+import { useFindAllFilms } from "../../hooks/useFindAllFilms";
+import { FilmsCarouselItem } from "./filmsCarouseltem/FilmsCarouseltem";
+import { PaginationCarousel } from "./paginationCarousel/PaginationCarousel";
+
+export const FilmsCarousel: React.FC = () => {
+    const [activeDotIndex, setActiveDotIndex] = useState(0);
+
+    const { data, errorMessage, isLoading, setToDefaultValueErrorMessageAndLoading } = useFindAllFilms();
+
+    const renderCarouselItem = useCallback(({ item }: { item: Film; index: number }) => {
+        return <FilmsCarouselItem imageUrl={item.imageUrl} />;
+    }, []);
+
+    return (
+        <Container>
+            {data ? (
+                <WrapperCarousel>
+                    <Carousel
+                        layoutCardOffset={9}
+                        layout={"default"}
+                        data={data}
+                        renderItem={renderCarouselItem}
+                        sliderWidth={width(100)}
+                        itemWidth={width(100)}
+                        loop
+                        autoplay
+                        autoplayDelay={3000}
+                        autoplayInterval={3000}
+                        lockScrollWhileSnapping
+                        onSnapToItem={(index: number): void => setActiveDotIndex(index)}
+                    />
+
+                    <PaginationCarousel activeDotIndex={activeDotIndex} dotsLength={data.length} />
+                </WrapperCarousel>
+            ) : null}
+        </Container>
+    );
+};

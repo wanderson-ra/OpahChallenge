@@ -75,22 +75,6 @@ interface DialogTheme {
     text: string;
 }
 
-interface StepIndicatorTheme {
-    stepStrokeCurrentColor: string;
-    stepStrokeFinishedColor: string;
-    stepStrokeUnFinishedColor: string;
-    separatorFinishedColor: string;
-    separatorUnFinishedColor: string;
-    stepIndicatorFinishedColor: string;
-    stepIndicatorUnFinishedColor: string;
-    stepIndicatorCurrentColor: string;
-    stepIndicatorLabelCurrentColor: string;
-    stepIndicatorLabelFinishedColor: string;
-    stepIndicatorLabelUnFinishedColor: string;
-    labelColor: string;
-    currentStepLabelColor: string;
-}
-
 interface BottomNavigatorTheme {
     backgroundColor: string;
     inactiveColor: string;
@@ -118,6 +102,10 @@ interface SwitchTheme {
     backgroundColor: string;
 }
 
+interface CarouselTheme {
+    paginationDotColor: string;
+}
+
 declare module "styled-components" {
     export interface DefaultTheme {
         primary: string;
@@ -142,8 +130,6 @@ declare module "styled-components" {
 
         button: ButtonTheme;
 
-        stepIndicator: StepIndicatorTheme;
-
         bottomNavigator: BottomNavigatorTheme;
 
         card: CardTheme;
@@ -153,5 +139,7 @@ declare module "styled-components" {
         shimmer: ShimmerTheme;
 
         switch: SwitchTheme;
+
+        carousel: CarouselTheme;
     }
 }

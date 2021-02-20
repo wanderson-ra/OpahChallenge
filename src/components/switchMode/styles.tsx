@@ -5,9 +5,6 @@ import SwitchSelector from "react-native-switch-selector";
 import styled from "styled-components/native";
 
 export const Container = styled.SafeAreaView`
-    position: absolute;
-    top: ${isIphoneX() ? height(7) : height(5)}px;
-    right: ${width(3)}px;
     justify-content: center;
     align-items: center;
     flex: 1;

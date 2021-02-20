@@ -58,22 +58,6 @@ export const dark: DefaultTheme = {
         text: "#FFFFFF",
     },
 
-    stepIndicator: {
-        stepStrokeCurrentColor: "#ffffff",
-        stepStrokeFinishedColor: "#ff578f",
-        stepStrokeUnFinishedColor: "#ffffff",
-        separatorFinishedColor: "#ff578f",
-        separatorUnFinishedColor: "#ffffff",
-        stepIndicatorFinishedColor: "#ff578f",
-        stepIndicatorUnFinishedColor: "#1d1d1d",
-        stepIndicatorCurrentColor: "#1d1d1d",
-        stepIndicatorLabelCurrentColor: "#ffffff",
-        stepIndicatorLabelFinishedColor: "#1d1d1d",
-        stepIndicatorLabelUnFinishedColor: "#ffffff",
-        labelColor: "#FFFFFF70",
-        currentStepLabelColor: "#ffffff",
-    },
-
     bottomNavigator: {
         backgroundColor: "#1d1d1d",
         activeColor: "#ffffff",
@@ -99,5 +83,9 @@ export const dark: DefaultTheme = {
 
     switch: {
         backgroundColor: "#1d1d1d",
+    },
+
+    carousel: {
+        paginationDotColor: "#FFFFFF",
     },
 };
