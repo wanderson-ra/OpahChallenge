@@ -1,5 +1,4 @@
-import { isIphoneX } from "react-native-iphone-x-helper";
-import { widthPercentageToDP as width, heightPercentageToDP as height } from "react-native-responsive-screen";
+import { widthPercentageToDP as width } from "react-native-responsive-screen";
 import SwitchSelector from "react-native-switch-selector";
 
 import styled from "styled-components/native";

@@ -10,6 +10,7 @@ import { RootState } from "src/store/reducers";
 
 import { BOTTOM_NAVIGATOR } from "src/globals/constants/screens";
 
+import { SwitchMode } from "../../components/switchMode/SwitchMode";
 import { BottomNavigator } from "./bottomNavigator/BottomNavigator";
 
 const AppStack = createStackNavigator();
@@ -33,8 +34,23 @@ export const AppRouter = (): React.ReactElement => {
         <>
             {mode && theme ? (
                 <ThemeProvider theme={theme}>
-                    <AppStack.Navigator headerMode={"none"} initialRouteName={BOTTOM_NAVIGATOR}>
-                        <AppStack.Screen name={BOTTOM_NAVIGATOR} component={BottomNavigator} />
+                    <AppStack.Navigator initialRouteName={BOTTOM_NAVIGATOR}>
+                        <AppStack.Screen
+                            options={{
+                                gestureEnabled: false,
+                                headerStyle: {
+                                    backgroundColor: theme.navigation.bar,
+                                    shadowOpacity: 0,
+                                    shadowRadius: 0,
+                                    elevation: 0,
+                                },
+                                headerTintColor: theme.font.extra,
+                                headerTransparent: false,
+                                title: "Star Wars",
+                            }}
+                            name={BOTTOM_NAVIGATOR}
+                            component={BottomNavigator}
+                        />
                     </AppStack.Navigator>
                 </ThemeProvider>
             ) : null}

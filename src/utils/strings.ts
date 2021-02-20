@@ -12,7 +12,9 @@ export const strings = new LocalizedStrings({
 
             cardsListHome: {},
         },
-        button: {},
+        button: {
+            tryAgain: "Tentar Novamente",
+        },
         error: {
             dialog: "Ops, algo deu errado!",
             default: "Ocorreu um erro inesperado. Por favor tente novamente.",
@@ -37,6 +39,11 @@ export const strings = new LocalizedStrings({
 
             cardsListHome: {},
         },
+
+        button: {
+            tryAgain: "Try Again",
+        },
+
         error: {
             dialog: "Ops, Something went wrong!",
             default: "An unexpected error has occurred. Please try again.",

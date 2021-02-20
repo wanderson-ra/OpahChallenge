@@ -4,10 +4,16 @@ import Carousel from "react-native-snap-carousel";
 
 import { Film } from "src/domains/films";
 
+import { strings } from "src/utils/strings";
+
+import { Conditional } from "src/components/conditional/Conditional";
+import { ErrorMessage } from "src/components/errorMessage/ErrorMessage";
+
 import { Container, WrapperCarousel } from "./styles";
 
 import { useFindAllFilms } from "../../hooks/useFindAllFilms";
 import { FilmsCarouselItem } from "./filmsCarouseltem/FilmsCarouseltem";
+import { Loading } from "./loading/Loading";
 import { PaginationCarousel } from "./paginationCarousel/PaginationCarousel";
 
 export const FilmsCarousel: React.FC = () => {
@@ -16,17 +22,32 @@ export const FilmsCarousel: React.FC = () => {
     const { data, errorMessage, isLoading, setToDefaultValueErrorMessageAndLoading } = useFindAllFilms();
 
     const renderCarouselItem = useCallback(({ item }: { item: Film; index: number }) => {
-        return <FilmsCarouselItem imageUrl={item.imageUrl} />;
+        return <FilmsCarouselItem film={item} />;
     }, []);
 
     return (
         <Container>
-            {data ? (
+            <Conditional when={isLoading}>
+                <Loading />
+            </Conditional>
+
+            <Conditional when={!isLoading && !data && !!errorMessage}>
+                <ErrorMessage
+                    onPress={(): void => setToDefaultValueErrorMessageAndLoading()}
+                    messageProps={{
+                        icon: "alert-circle-outline",
+                        buttonTitle: strings.button.tryAgain,
+                        message: errorMessage ? errorMessage : "",
+                    }}
+                />
+            </Conditional>
+
+            <Conditional when={!isLoading && !!data && !errorMessage}>
                 <WrapperCarousel>
                     <Carousel
                         layoutCardOffset={9}
                         layout={"default"}
-                        data={data}
+                        data={data ? data : []}
                         renderItem={renderCarouselItem}
                         sliderWidth={width(100)}
                         itemWidth={width(100)}
@@ -38,9 +59,9 @@ export const FilmsCarousel: React.FC = () => {
                         onSnapToItem={(index: number): void => setActiveDotIndex(index)}
                     />
 
-                    <PaginationCarousel activeDotIndex={activeDotIndex} dotsLength={data.length} />
+                    <PaginationCarousel activeDotIndex={activeDotIndex} dotsLength={data ? data.length : 0} />
                 </WrapperCarousel>
-            ) : null}
+            </Conditional>
         </Container>
     );
 };

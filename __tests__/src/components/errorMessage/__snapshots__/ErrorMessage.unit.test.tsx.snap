@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test of ErrorMessage Render with snapshot 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flexBasis": 0,
+        "flexGrow": 1,
+        "flexShrink": 1,
+        "justifyContent": "center",
+      },
+    ]
+  }
+>
+  <Text
+    allowFontScaling={false}
+    style={
+      Array [
+        Object {
+          "color": "#757575",
+          "fontSize": 66.5,
+        },
+        undefined,
+        Object {
+          "fontFamily": "Material Design Icons",
+          "fontStyle": "normal",
+          "fontWeight": "normal",
+        },
+        Object {},
+      ]
+    }
+    testID="icon"
+  >
+    󰌙
+  </Text>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#757575",
+          "fontSize": 28,
+          "marginTop": 26.5,
+          "textAlign": "center",
+          "width": 472.5,
+        },
+      ]
+    }
+    testID="message"
+  >
+    anyMessage
+  </Text>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#880e4f",
+        "borderRadius": 13.5,
+        "height": 53.5,
+        "justifyContent": "center",
+        "marginTop": 66.5,
+        "opacity": 1,
+        "width": 375,
+      }
+    }
+    testID="buttonPageMessage"
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#FFFFFF",
+            "fontSize": 28,
+            "fontWeight": "700",
+          },
+          undefined,
+          Object {
+            "opacity": 1,
+          },
+        ]
+      }
+      testID="title"
+    >
+      anyButtonTitle
+    </Text>
+  </View>
+</View>
+`;

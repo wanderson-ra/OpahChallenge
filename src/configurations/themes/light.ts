@@ -27,19 +27,8 @@ export const light: DefaultTheme = {
         inverse: "#FFFFFF",
     },
 
-    textInput: {
-        placeholder: "#757575",
-        color: "#757575",
-        backgroundColor: "#FFFFFF40",
-        borderColor: "#757575",
-        invalidField: "#e53935",
-        invalid: "#e53935",
-        valid: "#43a047",
-    },
-
     icon: {
-        default: "#EEEEEE",
-        secondary: "#757575",
+        default: "#757575",
         extra: "#000000",
         inverse: "#EEEEEE",
     },
@@ -69,13 +58,6 @@ export const light: DefaultTheme = {
         shadowColor: "#757575",
     },
 
-    actions: {
-        anamneses: "#8e24aa",
-        consultants: "#1e88e5",
-        exam: "#00897b",
-        patients: "#3949ab",
-    },
-
     shimmer: {
         container: "#EEEEEE",
         color: "#CCC",
@@ -84,7 +66,15 @@ export const light: DefaultTheme = {
     switch: {
         backgroundColor: "#EEEEEE",
     },
+
     carousel: {
         paginationDotColor: "#000000",
+    },
+
+    textInput: {
+        placeholder: "#757575",
+        color: "#757575",
+        backgroundColor: "#FFFFFF40",
+        borderColor: "#757575",
     },
 };

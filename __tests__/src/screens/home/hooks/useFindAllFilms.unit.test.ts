@@ -2,8 +2,6 @@ import { renderHook, act } from "@testing-library/react-hooks";
 import { when, resetAllWhenMocks } from "jest-when";
 import * as SWR from "swr";
 
-import { FilmNotFoundGatewayException } from "../../../../../src/gateways/exceptions/filmNotFoundGatewayException";
-
 import * as FindAllFilmsAndAddImageUrlUseCase from "../../../../../src/useCases/findAllFilmsAndAddImageUrlUseCase";
 
 import { properties } from "../../../../../src/configurations/properties";

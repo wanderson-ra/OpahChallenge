@@ -27,19 +27,8 @@ export const dark: DefaultTheme = {
         inverse: "#000000",
     },
 
-    textInput: {
-        placeholder: "#FFFFFF",
-        color: "#FFFFFF",
-        backgroundColor: "#1d1d1d",
-        borderColor: "transparent",
-        invalidField: "#FFD1D1",
-        invalid: "#FFD1D1",
-        valid: "#7DFF80",
-    },
-
     icon: {
         default: "#FFFFFF",
-        secondary: "#FFFFFF",
         extra: "#000000",
         inverse: "#000000",
     },
@@ -69,13 +58,6 @@ export const dark: DefaultTheme = {
         shadowColor: "#ffffff",
     },
 
-    actions: {
-        anamneses: "#ea80fc",
-        consultants: "#82b1ff",
-        exam: "#64ffda",
-        patients: "#8c9eff",
-    },
-
     shimmer: {
         container: "#757575",
         color: "#a4a4a4",
@@ -87,5 +69,12 @@ export const dark: DefaultTheme = {
 
     carousel: {
         paginationDotColor: "#FFFFFF",
+    },
+
+    textInput: {
+        placeholder: "#FFFFFF",
+        color: "#FFFFFF",
+        backgroundColor: "#1d1d1d",
+        borderColor: "transparent",
     },
 };

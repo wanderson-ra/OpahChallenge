@@ -1,31 +1,21 @@
 import React from "react";
 import { StatusBar } from "react-native";
-import { useSelector } from "react-redux";
 
 import { useTheme } from "styled-components/native";
 
-import { RootState } from "src/store/reducers";
-
-import { SwitchMode } from "src/components/switchMode/SwitchMode";
-
-import { Container, ScrollContainer, SwitchWrapper } from "./styles";
+import { Container, ScrollContainer } from "./styles";
 
 import { FilmsCarousel } from "./components/filmsCarousel/FilmsCarousel";
+import { HeaderHome } from "./components/headerHome/HeaderHome";
 
 export const Home: React.FC = () => {
     const theme = useTheme();
-    const { mode } = useSelector((state: RootState) => state.themeReducer.themeReducer);
 
     return (
         <Container>
-            <StatusBar
-                backgroundColor={theme.navigation.statusBar}
-                barStyle={mode === "dark" ? "light-content" : "dark-content"}
-            />
+            <StatusBar backgroundColor={theme.navigation.statusBar} barStyle={"light-content"} />
 
-            <SwitchWrapper>
-                <SwitchMode />
-            </SwitchWrapper>
+            <HeaderHome />
 
             <ScrollContainer>
                 <FilmsCarousel />

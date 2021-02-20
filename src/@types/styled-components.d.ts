@@ -17,7 +17,6 @@ interface Navigation {
 
 interface IconTheme {
     default: string;
-    secondary: string;
     extra: string;
     inverse: string;
 }
@@ -51,16 +50,6 @@ interface Container {
     inverse: string;
 }
 
-interface TextInputTheme {
-    placeholder: string;
-    color: string;
-    backgroundColor: string;
-    borderColor: string;
-    invalidField: string;
-    invalid: string;
-    valid: string;
-}
-
 interface ErrorTheme {
     container: string;
     text: string;
@@ -86,13 +75,6 @@ interface CardTheme {
     shadowColor: string;
 }
 
-interface ActionsTheme {
-    anamneses: string;
-    patients: string;
-    consultants: string;
-    exam: string;
-}
-
 interface ShimmerTheme {
     container: string;
     color: string;
@@ -104,6 +86,13 @@ interface SwitchTheme {
 
 interface CarouselTheme {
     paginationDotColor: string;
+}
+
+interface TextInputTheme {
+    placeholder: string;
+    color: string;
+    backgroundColor: string;
+    borderColor: string;
 }
 
 declare module "styled-components" {
@@ -124,8 +113,6 @@ declare module "styled-components" {
 
         font: FontTheme;
 
-        textInput: TextInputTheme;
-
         icon: IconTheme;
 
         button: ButtonTheme;
@@ -134,12 +121,12 @@ declare module "styled-components" {
 
         card: CardTheme;
 
-        actions: ActionsTheme;
-
         shimmer: ShimmerTheme;
 
         switch: SwitchTheme;
 
         carousel: CarouselTheme;
+
+        textInput: TextInputTheme;
     }
 }
