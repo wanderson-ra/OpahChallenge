@@ -32,7 +32,11 @@ export const strings = new LocalizedStrings({
             attention: "Attention",
         },
 
-        title: {},
+        title: {
+            page: {},
+
+            cardsListHome: {},
+        },
         error: {
             dialog: "Ops, Something went wrong!",
             default: "An unexpected error has occurred. Please try again.",
