@@ -11,7 +11,7 @@ module.exports = {
       "<rootDir>/__tests__/__fixture__/",
       "<rootDir>/__tests__/dataBuilders/",
       "<rootDir>/src/assets/",
-      "<rootDir>/src/configs/",
+      "<rootDir>/src/configurations/",
       "<rootDir>/src/utils/",
       "<rootDir>/src/domains/",
   ],

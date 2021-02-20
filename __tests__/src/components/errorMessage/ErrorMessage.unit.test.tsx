@@ -9,28 +9,6 @@ import colorTheme from "../../../../src/configurations/themes/theme";
 import { ErrorMessage, MessageProps } from "../../../../src/components/errorMessage/ErrorMessage";
 
 describe("Test of ErrorMessage", () => {
-    it("Render with snapshot", () => {
-        const message = "anyMessage";
-
-        const icon = "lan-disconnect";
-        const buttonTitle = "anyButtonTitle";
-        const onPress = jest.fn();
-
-        const messageProps: MessageProps = {
-            message: message,
-            icon: icon,
-            buttonTitle: buttonTitle,
-        };
-
-        const errorMessage: renderer.ReactTestRenderer = renderer.create(
-            <ThemeProvider theme={colorTheme.light}>
-                <ErrorMessage messageProps={messageProps} onPress={onPress} />
-            </ThemeProvider>
-        );
-
-        expect(errorMessage.toJSON()).toMatchSnapshot();
-    });
-
     it("Render with success", () => {
         const message = "anyMessage";
         const icon = "lan-disconnect";

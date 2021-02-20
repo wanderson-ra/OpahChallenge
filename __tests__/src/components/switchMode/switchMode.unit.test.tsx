@@ -65,38 +65,4 @@ describe("Test of SwitchMode", () => {
 
         expect(mockedThemeAction).toBeCalledWith(expectMode);
     });
-
-    it("Test snapshot", async () => {
-        const mode = "light";
-
-        const mockThemeReducer: ThemeReducer = {
-            mode: mode,
-            theme: colorTheme.light,
-        };
-
-        const initialPropsWith: ThemeState = {
-            themeReducer: mockThemeReducer,
-        };
-
-        store = mockStore({
-            userReducer: initialPropsWith,
-        });
-
-        store.dispatch = jest.fn();
-
-        const mockedUseSelector = jest.spyOn(Redux, "useSelector");
-        when(mockedUseSelector).calledWith(expect.any).mockReturnValue(mockThemeReducer);
-
-        await renderer.act(async () => {
-            switchMode = renderer.create(
-                <Provider store={store}>
-                    <ThemeProvider theme={colorTheme.dark}>
-                        <SwitchMode />
-                    </ThemeProvider>
-                </Provider>
-            );
-        });
-
-        expect(switchMode.toJSON()).toMatchSnapshot();
-    });
 });

@@ -13,20 +13,6 @@ describe("Tests of SearchTextField", () => {
         cleanup();
     });
 
-    it("Text snapshot", async () => {
-        const value = "";
-        const placeholder = "anyPlaceholder";
-        const onChangeText = jest.fn();
-
-        const searchTextField = render(
-            <ThemeProvider theme={colorTheme.light}>
-                <SearchTextField onChangeText={onChangeText} placeholder={placeholder} value={value} />
-            </ThemeProvider>
-        );
-
-        expect(searchTextField.toJSON()).toMatchSnapshot();
-    });
-
     it("Text with text changed and clear text", async () => {
         const value = "";
         const placeholder = "anyPlaceholder";

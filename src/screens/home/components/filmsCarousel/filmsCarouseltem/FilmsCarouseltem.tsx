@@ -18,12 +18,13 @@ export const FilmsCarouselItem: React.FC<FilmsCarouselItemProps> = (filmsCarouse
     return (
         <Container rippleColor={theme.ripple}>
             <Image
+                testID={"imageFilm"}
                 source={{
                     uri: film.imageUrl,
                     priority: FastImage.priority.normal,
                 }}
             />
-            <Title>{film.title}</Title>
+            <Title testID={"title"}>{film.title}</Title>
         </Container>
     );
 };

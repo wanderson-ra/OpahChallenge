@@ -8,20 +8,6 @@ import colorTheme from "../../../../src/configurations/themes/theme";
 import { Button } from "../../../../src/components/button/Button";
 
 describe("Test of Button", () => {
-    it("Test snapshot", async () => {
-        const title = "anyTitle";
-        const onPress = jest.fn();
-        const enable = false;
-
-        const button: renderer.ReactTestRenderer = renderer.create(
-            <ThemeProvider theme={colorTheme.light}>
-                <Button title={title} enable={enable} onPress={onPress} />
-            </ThemeProvider>
-        );
-
-        expect(button.toJSON()).toMatchSnapshot();
-    });
-
     it("Test with not called", async () => {
         const title = "anyTitle";
         const onPress = jest.fn();
