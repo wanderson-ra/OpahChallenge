@@ -43,7 +43,7 @@ export const dark: DefaultTheme = {
     },
 
     dialog: {
-        background: "#1d1d1d",
+        background: "#252525",
         text: "#FFFFFF",
     },
 
@@ -54,17 +54,17 @@ export const dark: DefaultTheme = {
     },
 
     card: {
-        background: "#1d1d1d",
+        background: "#252525",
         shadowColor: "#ffffff",
     },
 
     shimmer: {
-        container: "#757575",
-        color: "#a4a4a4",
+        container: "#252525",
+        color: "#4d4d4d",
     },
 
     switch: {
-        backgroundColor: "#1d1d1d",
+        backgroundColor: "#252525",
     },
 
     carousel: {
@@ -74,7 +74,7 @@ export const dark: DefaultTheme = {
     textInput: {
         placeholder: "#FFFFFF",
         color: "#FFFFFF",
-        backgroundColor: "#1d1d1d",
+        backgroundColor: "#252525",
         borderColor: "#9ef0bc",
     },
 };

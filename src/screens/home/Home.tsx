@@ -7,6 +7,7 @@ import { Container, ScrollContainer } from "./styles";
 
 import { FilmsCarousel } from "./components/filmsCarousel/FilmsCarousel";
 import { HeaderHome } from "./components/headerHome/HeaderHome";
+import { MainPeoples } from "./components/mainPeoples/MainPeoples";
 
 export const Home: React.FC = () => {
     const theme = useTheme();
@@ -14,11 +15,11 @@ export const Home: React.FC = () => {
     return (
         <Container>
             <StatusBar backgroundColor={theme.navigation.statusBar} barStyle={"light-content"} />
-
             <HeaderHome />
 
             <ScrollContainer>
                 <FilmsCarousel />
+                <MainPeoples />
             </ScrollContainer>
         </Container>
     );

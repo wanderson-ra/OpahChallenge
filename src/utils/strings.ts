@@ -10,10 +10,13 @@ export const strings = new LocalizedStrings({
         title: {
             page: {},
 
-            cardsListHome: {},
+            cardsListHome: {
+                mainPeople: "Principais Personages",
+            },
         },
         button: {
             tryAgain: "Tentar Novamente",
+            touchToReload: "Toque para recarregar",
         },
         error: {
             dialog: "Ops, algo deu errado!",
@@ -38,11 +41,14 @@ export const strings = new LocalizedStrings({
         title: {
             page: {},
 
-            cardsListHome: {},
+            cardsListHome: {
+                mainPeople: "Main Characters",
+            },
         },
 
         button: {
             tryAgain: "Try Again",
+            touchToReload: "Touch to reload",
         },
 
         error: {

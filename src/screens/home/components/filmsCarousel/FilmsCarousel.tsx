@@ -35,7 +35,7 @@ export const FilmsCarousel: React.FC = () => {
                 <ErrorMessage
                     onPress={(): void => setToDefaultValueErrorMessageAndLoading()}
                     messageProps={{
-                        icon: "alert-circle-outline",
+                        icon: "cloud-alert",
                         buttonTitle: strings.button.tryAgain,
                         message: errorMessage ? errorMessage : "",
                     }}

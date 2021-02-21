@@ -6,6 +6,8 @@ import { ThemeProvider } from "styled-components/native";
 
 import colorTheme from "../../../../src/configurations/themes/theme";
 
+import { strings } from "../../../../src/utils/strings";
+
 import { ErrorMessage, MessageProps } from "../../../../src/components/errorMessage/ErrorMessage";
 
 describe("Test of ErrorMessage", () => {
@@ -30,7 +32,7 @@ describe("Test of ErrorMessage", () => {
         const messageText = errorMessage.root.findByProps({ testID: "message" });
         const iconText = errorMessage.root.findByProps({ testID: "icon" });
 
-        expect(messageText.props.children).toEqual(message);
+        expect(messageText.props.children).toEqual(`${message}. ${strings.button.touchToReload}`);
         expect(iconText.props.name).toEqual(icon);
 
         const button = errorMessage.root.findByProps({ testID: "buttonPageMessage" });
@@ -62,7 +64,7 @@ describe("Test of ErrorMessage", () => {
         const messageText = errorMessage.root.findByProps({ testID: "message" });
         const iconText = errorMessage.root.findByProps({ testID: "icon" });
 
-        expect(messageText.props.children).toEqual(message);
+        expect(messageText.props.children).toEqual(`${message}. ${strings.button.touchToReload}`);
 
         expect(iconText.props.name).toEqual(icon);
 

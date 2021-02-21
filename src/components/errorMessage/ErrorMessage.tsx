@@ -1,12 +1,12 @@
 import React from "react";
-import { heightPercentageToDP as height, widthPercentageToDP as width } from "react-native-responsive-screen";
+import { heightPercentageToDP as height } from "react-native-responsive-screen";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
 import { useTheme } from "styled-components/native";
 
 import { Container, Message } from "./styles";
 
-import { Button } from "../button/Button";
+import { strings } from "../../utils/strings";
 
 export interface MessageProps {
     message: string;
@@ -24,18 +24,10 @@ export const ErrorMessage: React.FC<ErrorMessageProps> = (errorMessageProps) => 
     const { messageProps, onPress } = errorMessageProps;
 
     return (
-        <Container>
+        <Container testID={"buttonPageMessage"} onPress={onPress}>
             <Icon testID={"icon"} name={messageProps.icon} size={height(5)} color={theme.icon.default} />
 
-            <Message testID={"message"}>{messageProps.message}</Message>
-
-            <Button
-                containerStyle={{ width: width(50), height: height(4) }}
-                enable={true}
-                testID={"buttonPageMessage"}
-                onPress={(): void => onPress()}
-                title={messageProps.buttonTitle}
-            />
+            <Message testID={"message"}>{`${messageProps.message}. ${strings.button.touchToReload}`}</Message>
         </Container>
     );
 };

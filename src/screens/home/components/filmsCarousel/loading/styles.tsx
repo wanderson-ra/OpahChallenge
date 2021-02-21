@@ -10,8 +10,6 @@ export const Container = styled(ShimmerPlaceHolder).attrs((props) => ({
     width: width(100),
     shimmerColors: [props.theme.shimmer.container, props.theme.shimmer.color, props.theme.shimmer.container],
 }))`
-    width: ${width(100)}px;
-    height: ${height(32)}px;
     justify-content: center;
     align-items: center;
 `;
