@@ -1,6 +1,12 @@
+import * as Animatable from "react-native-animatable";
 import { heightPercentageToDP as height } from "react-native-responsive-screen";
 
 import styled from "styled-components/native";
+
+export const AnimatedView = styled(Animatable.View)`
+    justify-content: center;
+    align-items: center;
+`;
 
 export const Container = styled.SafeAreaView`
     flex: 1;

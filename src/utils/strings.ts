@@ -30,6 +30,10 @@ export const strings = new LocalizedStrings({
             planets: "Planetas",
             account: "Conta",
         },
+
+        placeholder: {
+            search: "Pesquisar",
+        },
     },
 
     en: {
@@ -62,6 +66,10 @@ export const strings = new LocalizedStrings({
             home: "Home",
             planets: "Planets",
             account: "Account",
+        },
+
+        placeholder: {
+            search: "Search",
         },
     },
 });

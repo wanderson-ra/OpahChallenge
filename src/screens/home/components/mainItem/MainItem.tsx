@@ -1,5 +1,6 @@
 import React from "react";
 import FastImage from "react-native-fast-image";
+import { SharedElement } from "react-navigation-shared-element";
 
 import { Container, Image, Name } from "./styles";
 
@@ -12,14 +13,16 @@ export const MainItem: React.FC<MainItemProps> = (mainItemProps) => {
 
     return (
         <Container>
-            <Image
-                testID={"MainImage"}
-                resizeMode={"cover"}
-                source={{
-                    uri: imageUrl,
-                    priority: FastImage.priority.normal,
-                }}
-            />
+            <SharedElement id={`patient.${name}.image`}>
+                <Image
+                    testID={"MainImage"}
+                    resizeMode={"cover"}
+                    source={{
+                        uri: imageUrl,
+                        priority: FastImage.priority.normal,
+                    }}
+                />
+            </SharedElement>
             <Name testID={"MainName"}>{name}</Name>
         </Container>
     );

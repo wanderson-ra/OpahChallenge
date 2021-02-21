@@ -1,4 +1,5 @@
 import FastImage from "react-native-fast-image";
+import { isIphoneX } from "react-native-iphone-x-helper";
 import Ripple from "react-native-material-ripple";
 import { widthPercentageToDP as width, heightPercentageToDP as height } from "react-native-responsive-screen";
 
@@ -15,7 +16,7 @@ export const Container = styled(Ripple)`
 
 export const Image = styled(FastImage)`
     width: ${width(100)}px;
-    height: ${height(30)}px;
+    height: ${isIphoneX() ? height(30) : height(35)}px;
 `;
 
 export const Title = styled.Text`

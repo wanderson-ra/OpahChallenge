@@ -3,10 +3,9 @@ import { heightPercentageToDP as height, widthPercentageToDP as width } from "re
 import styled from "styled-components/native";
 
 export const Container = styled.View`
-    height: ${height(10)}px;
+    height: ${height(12)}px;
     width: ${width(100)}px;
-    flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 10px;
 `;

@@ -9,7 +9,9 @@ import { strings } from "src/utils/strings";
 import { Conditional } from "src/components/conditional/Conditional";
 import { ErrorMessage } from "src/components/errorMessage/ErrorMessage";
 
-import { Container, WrapperCarousel } from "./styles";
+import { ANIMATION_DELAY_DURATION } from "src/globals/constants/animation";
+
+import { Container, WrapperCarousel, AnimatedView } from "./styles";
 
 import { useFindAllFilms } from "../../hooks/useFindAllFilms";
 import { FilmsCarouselItem } from "./filmsCarouseltem/FilmsCarouseltem";
@@ -43,24 +45,26 @@ export const FilmsCarousel: React.FC = () => {
             </Conditional>
 
             <Conditional when={!isLoading && !!data && !errorMessage}>
-                <WrapperCarousel>
-                    <Carousel
-                        layoutCardOffset={9}
-                        layout={"default"}
-                        data={data ? data : []}
-                        renderItem={renderCarouselItem}
-                        sliderWidth={width(100)}
-                        itemWidth={width(100)}
-                        loop
-                        autoplay
-                        autoplayDelay={3000}
-                        autoplayInterval={3000}
-                        lockScrollWhileSnapping
-                        onSnapToItem={(index: number): void => setActiveDotIndex(index)}
-                    />
+                <AnimatedView delay={ANIMATION_DELAY_DURATION} animation="fadeIn">
+                    <WrapperCarousel>
+                        <Carousel
+                            layoutCardOffset={9}
+                            layout={"default"}
+                            data={data ? data : []}
+                            renderItem={renderCarouselItem}
+                            sliderWidth={width(100)}
+                            itemWidth={width(100)}
+                            loop
+                            autoplay
+                            autoplayDelay={3000}
+                            autoplayInterval={3000}
+                            lockScrollWhileSnapping
+                            onSnapToItem={(index: number): void => setActiveDotIndex(index)}
+                        />
 
-                    <PaginationCarousel activeDotIndex={activeDotIndex} dotsLength={data ? data.length : 0} />
-                </WrapperCarousel>
+                        <PaginationCarousel activeDotIndex={activeDotIndex} dotsLength={data ? data.length : 0} />
+                    </WrapperCarousel>
+                </AnimatedView>
             </Conditional>
         </Container>
     );

@@ -82,6 +82,7 @@ interface ShimmerTheme {
 
 interface SwitchTheme {
     backgroundColor: string;
+    color: string;
 }
 
 interface CarouselTheme {

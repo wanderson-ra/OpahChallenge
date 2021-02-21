@@ -1,8 +1,9 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useCallback } from "react";
 import RNBootSplash from "react-native-bootsplash";
+import { createSharedElementStackNavigator, SharedElementsConfig } from "react-navigation-shared-element";
 import { useSelector, useDispatch } from "react-redux";
 
-import { CardStyleInterpolators, createStackNavigator, TransitionSpecs } from "@react-navigation/stack";
+import { CardStyleInterpolators, TransitionSpecs } from "@react-navigation/stack";
 import { ThemeProvider } from "styled-components/native";
 
 import { getMode } from "src/store/actions/theme/themeAction";
@@ -10,10 +11,13 @@ import { RootState } from "src/store/reducers";
 
 import { BOTTOM_NAVIGATOR, PEOPLE_DETAIL } from "src/globals/constants/screens";
 
+import { WrapperSwitchMode } from "./styles";
+
+import { SwitchMode } from "../../components/switchMode/SwitchMode";
 import { PeopleDetail } from "../../screens/peopleDetail/PeopleDetail";
 import { BottomNavigator } from "./bottomNavigator/BottomNavigator";
 
-const AppStack = createStackNavigator();
+const AppStack = createSharedElementStackNavigator();
 
 export const AppRouter = (): React.ReactElement => {
     const dispatch = useDispatch();
@@ -29,6 +33,14 @@ export const AppRouter = (): React.ReactElement => {
     useEffect(() => {
         dispatch(getMode());
     }, [dispatch]);
+
+    const renderSwitchMode = useCallback(() => {
+        return (
+            <WrapperSwitchMode>
+                <SwitchMode />
+            </WrapperSwitchMode>
+        );
+    }, []);
 
     return (
         <>
@@ -47,6 +59,7 @@ export const AppRouter = (): React.ReactElement => {
                                 headerTintColor: theme.navigation.title,
                                 headerTransparent: false,
                                 title: "Star Wars",
+                                headerRight: renderSwitchMode,
                             }}
                             name={BOTTOM_NAVIGATOR}
                             component={BottomNavigator}
@@ -73,6 +86,15 @@ export const AppRouter = (): React.ReactElement => {
                             }}
                             name={PEOPLE_DETAIL}
                             component={PeopleDetail}
+                            sharedElementsConfig={(route): SharedElementsConfig => {
+                                const { people } = route.params;
+                                return [
+                                    {
+                                        id: `patient.${people.name}.image`,
+                                        animation: "fade",
+                                    },
+                                ];
+                            }}
                         />
                     </AppStack.Navigator>
                 </ThemeProvider>

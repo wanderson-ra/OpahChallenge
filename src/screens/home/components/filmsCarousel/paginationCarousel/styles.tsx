@@ -1,10 +1,11 @@
+import { isIphoneX } from "react-native-iphone-x-helper";
 import { heightPercentageToDP as height } from "react-native-responsive-screen";
 import { Pagination } from "react-native-snap-carousel";
 
 import styled from "styled-components/native";
 
 export const PaginationContainer = styled(Pagination).attrs((props) => ({
-    containerStyle: { position: "absolute", bottom: height(-6) },
+    containerStyle: { position: "absolute", bottom: isIphoneX() ? height(-6) : height(-8) },
     dotStyle: {
         width: 10,
         height: 10,

@@ -8,7 +8,9 @@ import { strings } from "src/utils/strings";
 import { Conditional } from "src/components/conditional/Conditional";
 import { ErrorMessage } from "src/components/errorMessage/ErrorMessage";
 
-import { Container, ListMainsPeople, Title } from "./styles";
+import { ANIMATION_DELAY_DURATION } from "src/globals/constants/animation";
+
+import { AnimatedView, Container, ListMainsPeople, Title } from "./styles";
 
 import { useFindMainPeoples } from "../../hooks/useFindMainPeoples";
 import { Loading } from "./loading/Loading";
@@ -31,6 +33,7 @@ export const MainPeoples: React.FC = () => {
                 <MainPeopleItem
                     applyMarginRight={verifyIndexToItemRenderIsLastItemInLastPeople(item.index)}
                     people={item.item}
+                    index={item.index}
                 />
             );
         },
@@ -56,7 +59,9 @@ export const MainPeoples: React.FC = () => {
                 </Conditional>
 
                 <Conditional when={!isLoading && !!data && !errorMessage}>
-                    <Title>{strings.title.cardsListHome.mainPeople}</Title>
+                    <AnimatedView delay={ANIMATION_DELAY_DURATION} animation="fadeIn">
+                        <Title>{strings.title.cardsListHome.mainPeople}</Title>
+                    </AnimatedView>
                     <ListMainsPeople
                         testID={"ListMainPeoples"}
                         showsHorizontalScrollIndicator={false}

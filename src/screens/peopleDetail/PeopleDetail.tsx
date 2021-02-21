@@ -1,12 +1,14 @@
 import React, { useLayoutEffect } from "react";
 import { StatusBar } from "react-native";
+import FastImage from "react-native-fast-image";
+import { SharedElement } from "react-navigation-shared-element";
 
 import { RouteProp, useRoute, useNavigation } from "@react-navigation/native";
 import { useTheme } from "styled-components/native";
 
 import { People } from "src/domains/people";
 
-import { Container } from "./styles";
+import { Container, Image } from "./styles";
 
 type DetailsParams = {
     params: {
@@ -32,6 +34,17 @@ export const PeopleDetail: React.FC = () => {
     return (
         <Container>
             <StatusBar backgroundColor={theme.navigation.statusBar} barStyle={"light-content"} />
+
+            <SharedElement id={`patient.${people.name}.image`}>
+                <Image
+                    testID={"MainImage"}
+                    resizeMode={"cover"}
+                    source={{
+                        uri: people.imageUrl,
+                        priority: FastImage.priority.normal,
+                    }}
+                />
+            </SharedElement>
         </Container>
     );
 };

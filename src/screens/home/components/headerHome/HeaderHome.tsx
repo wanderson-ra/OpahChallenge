@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import { useTheme } from "styled-components/native";
 
-import { SwitchMode } from "src/components/switchMode/SwitchMode";
+import { strings } from "src/utils/strings";
 
 import { Container } from "./styles";
 
@@ -17,11 +17,10 @@ export const HeaderHome: React.FC = () => {
             <SearchTextField
                 selectionColor={theme.textInput.placeholder}
                 placeholderTextColor={theme.textInput.placeholder}
-                placeholder={"Pesquisar"}
+                placeholder={strings.placeholder.search}
                 onChangeText={setSearch}
                 value={search}
             />
-            <SwitchMode />
         </Container>
     );
 };

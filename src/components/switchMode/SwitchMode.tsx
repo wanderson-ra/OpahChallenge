@@ -36,7 +36,7 @@ export const SwitchMode: React.FC = () => {
                 onPress={(value: string): void => save(value === "light" ? "light" : "dark")}
                 textColor={theme.font.primary}
                 selectedColor={theme.font.inverse}
-                buttonColor={theme.primary}
+                buttonColor={theme.switch.color}
                 borderColor={theme.card.background}
                 hasPadding
                 options={[

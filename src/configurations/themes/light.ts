@@ -65,6 +65,7 @@ export const light: DefaultTheme = {
 
     switch: {
         backgroundColor: "#EEEEEE",
+        color: "#4511D4",
     },
 
     carousel: {

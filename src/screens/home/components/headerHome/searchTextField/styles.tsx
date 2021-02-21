@@ -9,12 +9,12 @@ import styled from "styled-components/native";
 import { metrics } from "src/configurations/metrics";
 
 export const Container = styled.View`
-    height: ${height(4)}px;
+    height: ${isIphoneX() ? height(5) : height(6)}px;
 `;
 
 export const TextInputContainer = styled(View)`
-    width: ${width(60)}px;
-    height: ${isIphoneX() ? height(4) : height(4)}px;
+    width: ${width(95)}px;
+    height: ${isIphoneX() ? height(5) : height(6)}px;
     background-color: ${(props): string => props.theme.textInput.backgroundColor};
     border-color: ${(props): string => props.theme.textInput.borderColor};
     border-width: 0.5px;
@@ -34,8 +34,8 @@ export const SearchTextInput = styled(TextInput)`
     margin-left: ${width(2)}px;
     color: ${(props): string => props.theme.textInput.color};
     font-size: ${metrics.font.medium}px;
-    width: ${width(40)}px;
-    height: ${isIphoneX() ? height(4) : height(4)}px;
+    width: ${width(60)}px;
+    height: ${isIphoneX() ? height(5) : height(6)}px;
     padding-top: ${Platform.select({
         android: height(2),
         ios: 0,

@@ -1,8 +1,14 @@
+import * as Animatable from "react-native-animatable";
 import { heightPercentageToDP as height, widthPercentageToDP as width } from "react-native-responsive-screen";
 
 import styled from "styled-components/native";
 
 import { metrics } from "src/configurations/metrics";
+
+export const AnimatedView = styled(Animatable.View)`
+    justify-content: center;
+    align-items: center;
+`;
 
 export const Container = styled.View`
     margin-top: ${height(6)}px;

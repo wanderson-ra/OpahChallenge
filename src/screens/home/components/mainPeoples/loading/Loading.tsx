@@ -6,7 +6,7 @@ export const Loading: React.FC = () => {
     return (
         <Container>
             <LoadingTitle />
-            <ContainerLoadingItems>
+            <ContainerLoadingItems showsHorizontalScrollIndicator={false}>
                 <LoadingItem />
                 <LoadingItem />
                 <LoadingItem />
