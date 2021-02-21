@@ -8,7 +8,7 @@ import { strings } from "src/utils/strings";
 import { Home } from "src/screens/home/Home";
 import { Planets } from "src/screens/planets/Planets";
 
-import { HOME, ACCOUNT, PLANETS } from "src/globals/constants/screens";
+import { HOME, PLANETS } from "src/globals/constants/screens";
 
 const BottomNavigatorStack = createMaterialBottomTabNavigator();
 
