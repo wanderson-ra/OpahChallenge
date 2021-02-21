@@ -1,4 +1,4 @@
-import React, { memo, useCallback } from "react";
+import React, { memo } from "react";
 import { isIphoneX } from "react-native-iphone-x-helper";
 import { heightPercentageToDP as height, widthPercentageToDP as width } from "react-native-responsive-screen";
 
@@ -15,14 +15,14 @@ interface MainPeopleItemProps {
     applyMarginRight: boolean;
 }
 
-export const MainPeopleItem: React.FC<MainPeopleItemProps> = (mainPeopleItemProps) => {
+export const View: React.FC<MainPeopleItemProps> = (mainPeopleItemProps) => {
     const { people, applyMarginRight } = mainPeopleItemProps;
 
     return (
         <Container applyMarginRight={applyMarginRight} testID={"Container"}>
             <CardAction
                 hasShadow={false}
-                action={(): void => console.log("Press")}
+                action={(): boolean => false}
                 height={isIphoneX() ? height(18) : height(23)}
                 width={isIphoneX() ? width(35) : width(40)}
             >
@@ -31,3 +31,6 @@ export const MainPeopleItem: React.FC<MainPeopleItemProps> = (mainPeopleItemProp
         </Container>
     );
 };
+
+const MainPeopleItem = memo(View);
+export { MainPeopleItem };
