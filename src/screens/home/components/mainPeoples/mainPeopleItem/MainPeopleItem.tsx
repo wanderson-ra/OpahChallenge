@@ -29,12 +29,7 @@ export const View: React.FC<MainPeopleItemProps> = (mainPeopleItemProps) => {
     return (
         <AnimatedView delay={ANIMATION_DELAY_DURATION + index * 100} animation="fadeIn">
             <Container applyMarginRight={applyMarginRight} testID={"Container"}>
-                <CardAction
-                    hasShadow={false}
-                    action={(): void => navigate(PEOPLE_DETAIL, { people: people })}
-                    height={isIphoneX() ? height(18) : height(23)}
-                    width={isIphoneX() ? width(35) : width(40)}
-                >
+                <CardAction hasShadow={false} action={(): void => navigate(PEOPLE_DETAIL, { people: people })}>
                     <MainItem imageUrl={people.imageUrl ? people.imageUrl : ""} name={people.name} />
                 </CardAction>
             </Container>

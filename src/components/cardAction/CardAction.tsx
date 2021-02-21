@@ -7,22 +7,13 @@ import { Container } from "./styles";
 
 interface CardCardActionProps {
     children: React.ReactNode;
-    width: number;
-    height: number;
     borderRadius?: number;
     action: () => void;
     hasShadow?: boolean;
 }
 
 export const CardAction: React.FC<CardCardActionProps> = (cardCardActionProps) => {
-    const {
-        children,
-        height,
-        width,
-        action,
-        borderRadius = heightPercentageToDP(1),
-        hasShadow = true,
-    } = cardCardActionProps;
+    const { children, action, borderRadius = heightPercentageToDP(1), hasShadow = true } = cardCardActionProps;
 
     const theme = useTheme();
 
@@ -34,8 +25,6 @@ export const CardAction: React.FC<CardCardActionProps> = (cardCardActionProps) =
             rippleColor={theme.ripple}
             style={{ elevation: hasShadow ? 4 : 0 }}
             onPress={action}
-            height={height}
-            width={width}
         >
             {children}
         </Container>
