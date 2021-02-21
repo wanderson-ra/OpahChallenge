@@ -3,7 +3,7 @@ import { Film } from "src/domains/films";
 import { properties } from "src/configurations/properties";
 
 import { get } from "../baseApi";
-import { handlerSpecialityError } from "./handlerError";
+import { handlerError } from "./handlerError";
 import { FilmResponseJson } from "./json/filmResponseJson";
 import { ResultJson } from "./json/resultJson";
 
@@ -34,6 +34,6 @@ export const findAll = async (): Promise<Array<Film>> => {
 
         return films;
     } catch (error) {
-        throw handlerSpecialityError(error);
+        throw handlerError(error);
     }
 };

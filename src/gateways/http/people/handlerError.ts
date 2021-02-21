@@ -8,9 +8,9 @@ import { BaseException } from "src/globals/exceptions/baseException";
 
 import { PeopleNotFoundGatewayException } from "../../exceptions/peopleNotFoundGatewayException";
 
-export const handlerSpecialityError = (axiosError: AxiosError): BaseException => {
+export const handlerError = (axiosError: AxiosError): BaseException => {
     if (axiosError?.response?.status === 404) {
-        throw new PeopleNotFoundGatewayException(strings.error.filmsNotFound);
+        throw new PeopleNotFoundGatewayException(strings.error.peoplesNotFound);
     }
     throw new DefaultRestGatewayException();
 };

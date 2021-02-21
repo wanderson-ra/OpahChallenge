@@ -1,9 +1,9 @@
-export interface ImageUrlsByCharacter {
+export interface ImageUrlsByMainPeople {
     url: string;
     name: string;
 }
 
-export const imageUrlsByCharacter: Array<ImageUrlsByCharacter> = [
+export const imageUrlsByMainPeople: Array<ImageUrlsByMainPeople> = [
     {
         name: "Luke Skywalker",
         url:

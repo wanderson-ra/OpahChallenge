@@ -19,6 +19,7 @@ export const strings = new LocalizedStrings({
             dialog: "Ops, algo deu errado!",
             default: "Ocorreu um erro inesperado. Por favor tente novamente.",
             filmsNotFound: "Não foram encontrados títulos.",
+            peoplesNotFound: "Não foram encontrados personagens.",
         },
 
         bottomTabs: {
@@ -48,6 +49,7 @@ export const strings = new LocalizedStrings({
             dialog: "Ops, Something went wrong!",
             default: "An unexpected error has occurred. Please try again.",
             filmsNotFound: "No titles were found.",
+            peoplesNotFound: "No characters where found.",
         },
 
         bottomTabs: {

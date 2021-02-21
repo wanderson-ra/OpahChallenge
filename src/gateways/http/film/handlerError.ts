@@ -7,7 +7,7 @@ import { strings } from "src/utils/strings";
 
 import { BaseException } from "src/globals/exceptions/baseException";
 
-export const handlerSpecialityError = (axiosError: AxiosError): BaseException => {
+export const handlerError = (axiosError: AxiosError): BaseException => {
     if (axiosError?.response?.status === 404) {
         throw new FilmNotFoundGatewayException(strings.error.filmsNotFound);
     }
