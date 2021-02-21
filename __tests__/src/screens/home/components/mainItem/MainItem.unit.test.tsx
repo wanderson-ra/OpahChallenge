@@ -1,5 +1,4 @@
 import React from "react";
-import Ripple from "react-native-material-ripple";
 import renderer from "react-test-renderer";
 
 import { ThemeProvider } from "styled-components/native";
