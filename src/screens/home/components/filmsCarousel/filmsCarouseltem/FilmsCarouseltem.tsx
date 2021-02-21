@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import FastImage from "react-native-fast-image";
 
 import { useTheme } from "styled-components/native";
@@ -10,7 +10,7 @@ import { Container, Image, Title } from "./styles";
 interface FilmsCarouselItemProps {
     film: Film;
 }
-export const FilmsCarouselItem: React.FC<FilmsCarouselItemProps> = (filmsCarouselItemProps) => {
+const View: React.FC<FilmsCarouselItemProps> = (filmsCarouselItemProps) => {
     const theme = useTheme();
 
     const { film } = filmsCarouselItemProps;
@@ -28,3 +28,7 @@ export const FilmsCarouselItem: React.FC<FilmsCarouselItemProps> = (filmsCarouse
         </Container>
     );
 };
+
+const FilmsCarouselItem = memo(View);
+
+export { FilmsCarouselItem };

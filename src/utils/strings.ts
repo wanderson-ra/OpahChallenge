@@ -22,7 +22,7 @@ export const strings = new LocalizedStrings({
         },
 
         bottomTabs: {
-            home: "Casa",
+            home: "Início",
             planets: "Planetas",
             account: "Conta",
         },

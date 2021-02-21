@@ -1,18 +1,18 @@
 import { DefaultTheme } from "styled-components/native";
 
 export const light: DefaultTheme = {
-    primary: "#880e4f",
-    dark: "#560027",
-    light: "#bc477b",
+    primary: "#107050",
+    dark: "#004428",
+    light: "#4a9f7c",
     ripple: "#757575",
-    logo: "#880e4f",
+    logo: "#107050",
     loading: "#FFFFFF",
     borderColor: "#000000",
 
     navigation: {
-        bar: "#880e4f",
+        bar: "#107050",
         title: "#FFFFFF",
-        statusBar: "#560027",
+        statusBar: "#004428",
     },
 
     page: {
@@ -23,7 +23,7 @@ export const light: DefaultTheme = {
         primary: "#000000",
         secondary: "#757575",
         extra: "#FFFFFF",
-        actions: "#880e4f",
+        actions: "#107050",
         inverse: "#FFFFFF",
     },
 
@@ -34,7 +34,7 @@ export const light: DefaultTheme = {
     },
 
     button: {
-        primary: "#880e4f",
+        primary: "#107050",
         font: "#FFFFFF",
         ripple: "#757575",
         border: {
@@ -48,7 +48,7 @@ export const light: DefaultTheme = {
     },
 
     bottomNavigator: {
-        backgroundColor: "#880e4f",
+        backgroundColor: "#107050",
         activeColor: "#ffffff",
         inactiveColor: "#aaaaaa",
     },

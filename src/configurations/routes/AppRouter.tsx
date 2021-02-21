@@ -43,7 +43,7 @@ export const AppRouter = (): React.ReactElement => {
                                     shadowRadius: 0,
                                     elevation: 0,
                                 },
-                                headerTintColor: theme.font.extra,
+                                headerTintColor: theme.navigation.title,
                                 headerTransparent: false,
                                 title: "Star Wars",
                             }}

@@ -1,17 +1,17 @@
 import { DefaultTheme } from "styled-components/native";
 
 export const dark: DefaultTheme = {
-    primary: "#ff578f",
-    dark: "#c71662",
-    light: "#ff8cbf",
+    primary: "#9ef0bc",
+    dark: "#6dbd8c",
+    light: "#d1ffef",
     ripple: "#FFFFFF",
-    logo: "#ff578f",
+    logo: "#9ef0bc",
     loading: "#FFFFFF",
     borderColor: "transparent",
 
     navigation: {
         bar: "#1d1d1d",
-        title: "#FFFFFF",
+        title: "#9ef0bc",
         statusBar: "#0c0107",
     },
 
@@ -23,7 +23,7 @@ export const dark: DefaultTheme = {
         primary: "#FFFFFF",
         secondary: "#FFFFFF",
         extra: "#FFFFFF",
-        actions: "#ff578f",
+        actions: "#9ef0bc",
         inverse: "#000000",
     },
 
@@ -34,7 +34,7 @@ export const dark: DefaultTheme = {
     },
 
     button: {
-        primary: "#ff578f",
+        primary: "#9ef0bc",
         font: "#000000",
         ripple: "transparent",
         border: {
@@ -49,8 +49,8 @@ export const dark: DefaultTheme = {
 
     bottomNavigator: {
         backgroundColor: "#1d1d1d",
-        activeColor: "#ffffff",
-        inactiveColor: "#FFFFFF40",
+        activeColor: "#9ef0bc",
+        inactiveColor: "#FFFFFF50",
     },
 
     card: {
