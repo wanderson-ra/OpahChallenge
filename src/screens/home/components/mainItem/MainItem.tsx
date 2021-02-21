@@ -13,13 +13,14 @@ export const MainItem: React.FC<MainItemProps> = (mainItemProps) => {
     return (
         <Container>
             <Image
+                testID={"MainImage"}
                 resizeMode={"cover"}
                 source={{
                     uri: imageUrl,
                     priority: FastImage.priority.normal,
                 }}
             />
-            <Name>{name}</Name>
+            <Name testID={"MainName"}>{name}</Name>
         </Container>
     );
 };

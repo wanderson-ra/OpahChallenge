@@ -5,22 +5,23 @@ import renderer from "react-test-renderer";
 import { when } from "jest-when";
 import { ThemeProvider } from "styled-components/native";
 
-import colorTheme from "../../../../../src/configurations/themes/theme";
+import colorTheme from "../../../../../../src/configurations/themes/theme";
 
-import { ErrorMessage } from "../../../../../src/components/errorMessage/ErrorMessage";
+import { ErrorMessage } from "../../../../../../src/components/errorMessage/ErrorMessage";
 
-import { FilmsCarousel } from "../../../../../src/screens/home/components/filmsCarousel/FilmsCarousel";
-import { Loading } from "../../../../../src/screens/home/components/filmsCarousel/loading/Loading";
-import { PaginationCarousel } from "../../../../../src/screens/home/components/filmsCarousel/paginationCarousel/PaginationCarousel";
-import * as UseFindAllFilms from "../../../../../src/screens/home/hooks/useFindAllFilms";
+import { FilmsCarousel } from "../../../../../../src/screens/home/components/filmsCarousel/FilmsCarousel";
+import { Loading } from "../../../../../../src/screens/home/components/filmsCarousel/loading/Loading";
+import { PaginationCarousel } from "../../../../../../src/screens/home/components/filmsCarousel/paginationCarousel/PaginationCarousel";
+import * as UseFindAllFilms from "../../../../../../src/screens/home/hooks/useFindAllFilms";
 
-import { filmTemplateFull } from "../../../../dataBuilders/domains/filmTemplate";
+import { filmTemplateFull } from "../../../../../dataBuilders/domains/filmTemplate";
 
 jest.mock("react-native/Libraries/Animated/src/NativeAnimatedHelper");
 
 describe("Test of FilmsCarousel", () => {
     beforeEach(() => {
         jest.useFakeTimers();
+        jest.runAllTimers();
     });
 
     it("Test with render loading", async () => {

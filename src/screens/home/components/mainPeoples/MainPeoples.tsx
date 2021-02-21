@@ -19,10 +19,8 @@ export const MainPeoples: React.FC = () => {
 
     const verifyIndexToItemRenderIsLastItemInLastPeople = useCallback(
         (index: number): boolean => {
-            if (data) {
-                return index !== data.length - 1;
-            }
-            return false;
+            const dataLength = data ? data.length : 0;
+            return index !== dataLength - 1;
         },
         [data]
     );

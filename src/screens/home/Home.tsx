@@ -15,9 +15,8 @@ export const Home: React.FC = () => {
     return (
         <Container>
             <StatusBar backgroundColor={theme.navigation.statusBar} barStyle={"light-content"} />
-            <HeaderHome />
-
             <ScrollContainer>
+                <HeaderHome />
                 <FilmsCarousel />
                 <MainPeoples />
             </ScrollContainer>

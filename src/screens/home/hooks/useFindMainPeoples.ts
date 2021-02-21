@@ -12,14 +12,14 @@ import { strings } from "src/utils/strings";
 
 import { BaseException } from "src/globals/exceptions/baseException";
 
-export interface UseFindMainPeoples {
+export interface UseFindMainPeoplesProps {
     setToDefaultValueErrorMessageAndLoading: () => void;
     isLoading: boolean;
     errorMessage: string | undefined;
     data: Array<People> | undefined;
 }
 
-export function useFindMainPeoples(): UseFindMainPeoples {
+export function useFindMainPeoples(): UseFindMainPeoplesProps {
     const [isLoading, setIsLoading] = useState<boolean>(true);
     const [errorMessage, setErrorMessage] = useState<string>();
 
