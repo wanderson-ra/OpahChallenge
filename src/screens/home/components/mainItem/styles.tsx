@@ -1,5 +1,4 @@
 import FastImage from "react-native-fast-image";
-import { isIphoneX } from "react-native-iphone-x-helper";
 import { heightPercentageToDP as height, widthPercentageToDP as width } from "react-native-responsive-screen";
 
 import styled from "styled-components/native";
