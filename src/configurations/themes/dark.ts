@@ -75,6 +75,6 @@ export const dark: DefaultTheme = {
         placeholder: "#FFFFFF",
         color: "#FFFFFF",
         backgroundColor: "#1d1d1d",
-        borderColor: "transparent",
+        borderColor: "#9ef0bc",
     },
 };

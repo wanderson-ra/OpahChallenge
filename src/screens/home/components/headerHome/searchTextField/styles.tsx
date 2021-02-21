@@ -16,7 +16,7 @@ export const TextInputContainer = styled(View)`
     width: ${width(60)}px;
     height: ${isIphoneX() ? height(4) : height(4)}px;
     background-color: ${(props): string => props.theme.textInput.backgroundColor};
-    border-color: #757575;
+    border-color: ${(props): string => props.theme.textInput.borderColor};
     border-width: 0.5px;
     border-radius: ${metrics.textInput.borderRadius}px;
     padding-left: ${width(3)}px;
@@ -32,7 +32,7 @@ export const IconTextInput = styled(Icon)`
 
 export const SearchTextInput = styled(TextInput)`
     margin-left: ${width(2)}px;
-    color: #757575;
+    color: ${(props): string => props.theme.textInput.color};
     font-size: ${metrics.font.medium}px;
     width: ${width(40)}px;
     height: ${isIphoneX() ? height(4) : height(4)}px;
