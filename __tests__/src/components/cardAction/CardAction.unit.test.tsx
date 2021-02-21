@@ -12,12 +12,10 @@ describe("Test of Button", () => {
     it("Test with called card", async () => {
         const action = jest.fn();
         const title = "anyTitle";
-        const width = 100;
-        const height = 100;
 
         const cardAction: renderer.ReactTestRenderer = renderer.create(
             <ThemeProvider theme={colorTheme.light}>
-                <CardAction action={action} height={height} width={width}>
+                <CardAction action={action}>
                     <Text testID={"title"}>{title}</Text>
                 </CardAction>
             </ThemeProvider>
@@ -31,8 +29,6 @@ describe("Test of Button", () => {
         });
 
         expect(titleText.props.children).toEqual(title);
-        expect(rippleTouchable.props.width).toEqual(width);
-        expect(rippleTouchable.props.height).toEqual(height);
         expect(action).toHaveBeenCalled();
     });
 });
