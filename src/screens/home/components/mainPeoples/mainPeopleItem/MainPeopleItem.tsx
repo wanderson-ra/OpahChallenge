@@ -1,6 +1,4 @@
 import React, { memo } from "react";
-import { isIphoneX } from "react-native-iphone-x-helper";
-import { heightPercentageToDP as height, widthPercentageToDP as width } from "react-native-responsive-screen";
 
 import { useNavigation } from "@react-navigation/native";
 
