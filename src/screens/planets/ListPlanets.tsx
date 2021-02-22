@@ -10,6 +10,7 @@ import { ErrorMessage } from "src/components/errorMessage/ErrorMessage";
 
 import { Container } from "./styles";
 
+import { Loading } from "./components/loading/Loading";
 import { Planets } from "./components/planets/Planets";
 import { useFindByPageNumber } from "./hooks/useFindByPageNumber";
 
@@ -22,6 +23,10 @@ export const ListPlanets: React.FC = () => {
         <>
             <StatusBar backgroundColor={theme.navigation.statusBar} barStyle={"light-content"} />
             <Container>
+                <Conditional when={isLoading}>
+                    <Loading />
+                </Conditional>
+
                 <Conditional when={!!data && !isLoading}>
                     <Planets planets={data ? data : []} />
                 </Conditional>

@@ -8,7 +8,7 @@ import { Container } from "./styles";
 interface CardCardActionProps {
     children: React.ReactNode;
     borderRadius?: number;
-    action: () => void;
+    action?: () => void;
     hasShadow?: boolean;
 }
 

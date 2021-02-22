@@ -21,7 +21,7 @@ const View: React.FC<PlanetItemProps> = (patientItemProps) => {
 
     return (
         <AnimatedView delay={ANIMATION_DELAY_DURATION + index * 50} animation="fadeInLeft">
-            <CardAction action={() => false} hasShadow={false}>
+            <CardAction hasShadow={false}>
                 <WrapperInformation>
                     <Initials
                         name={planet.name}
