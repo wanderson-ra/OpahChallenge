@@ -8,10 +8,13 @@
         <!-- <item name="colorPrimaryDark">#003b8e</item> -->
         <!-- EditText Cursor Color -->
         <!-- <item name="colorControlActivated">#5e91f2</item> -->
+
+        <item name="android:statusBarColor">@color/bootsplash_background</item>
     </style>
 
     <style name="BootTheme" parent="AppTheme">
         <!-- set the generated bootsplash.xml drawable as activity background -->
+        <item name="android:statusBarColor">@color/bootsplash_background</item>
         <item name="android:background">@drawable/bootsplash</item>
     </style>
 
