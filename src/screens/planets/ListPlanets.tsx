@@ -1,9 +1,7 @@
-import React, { useCallback } from "react";
+import React from "react";
 import { StatusBar } from "react-native";
 
 import { useTheme } from "styled-components/native";
-
-import { Planet } from "src/domains/planet";
 
 import { strings } from "src/utils/strings";
 
