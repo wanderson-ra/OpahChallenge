@@ -1,6 +1,7 @@
+import { Planet } from "src/domains/planet";
+
 import { properties } from "src/configurations/properties";
 
-import { Planet } from "../../../domains/planet";
 import { get } from "../baseApi";
 import { handlerError } from "./handlerError";
 import { PlanetResponseJson } from "./json/planetResponseJson";
