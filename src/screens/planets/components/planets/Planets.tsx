@@ -1,8 +1,6 @@
-import React, { useCallback, useState, useEffect } from "react";
+import React, { useCallback } from "react";
 import { ListRenderItemInfo } from "react-native";
 import { heightPercentageToDP as height } from "react-native-responsive-screen";
-
-import { useTheme } from "styled-components/native";
 
 import { Planet } from "src/domains/planet";
 
