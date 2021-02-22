@@ -7,7 +7,7 @@ import colorTheme from "../../../../../../../src/configurations/themes/theme";
 
 import { CardAction } from "../../../../../../../src/components/cardAction/CardAction";
 
-import { MainItem } from "../../../../../../../src/screens/home/components/mainItem/MainItem";
+import { MainItem } from "../../../../../../../src/screens/home/components/mainPeoples/mainPeopleItem/mainItem/MainItem";
 import { MainPeopleItem } from "../../../../../../../src/screens/home/components/mainPeoples/mainPeopleItem/MainPeopleItem";
 
 import { PEOPLE_DETAIL } from "../../../../../../../src/globals/constants/screens";

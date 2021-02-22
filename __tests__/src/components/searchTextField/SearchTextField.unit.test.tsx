@@ -4,9 +4,9 @@ import Ripple from "react-native-material-ripple";
 import { render, cleanup, fireEvent } from "@testing-library/react-native";
 import { ThemeProvider } from "styled-components/native";
 
-import colorTheme from "../../../../../../../src/configurations/themes/theme";
+import colorTheme from "../../../../src/configurations/themes/theme";
 
-import { SearchTextField } from "../../../../../../../src/screens/home/components/headerHome/searchTextField/SearchTextField";
+import { SearchTextField } from "../../../../src/components/searchTextField/SearchTextField";
 
 describe("Tests of SearchTextField", () => {
     beforeEach(() => {

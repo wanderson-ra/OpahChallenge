@@ -11,7 +11,7 @@ import { PEOPLE_DETAIL } from "src/globals/constants/screens";
 
 import { Container, AnimatedView } from "./styles";
 
-import { MainItem } from "../../mainItem/MainItem";
+import { MainItem } from "./mainItem/MainItem";
 
 interface MainPeopleItemProps {
     people: People;

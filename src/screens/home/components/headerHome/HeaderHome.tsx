@@ -4,9 +4,9 @@ import { useTheme } from "styled-components/native";
 
 import { strings } from "src/utils/strings";
 
-import { Container } from "./styles";
+import { SearchTextField } from "src/components/searchTextField/SearchTextField";
 
-import { SearchTextField } from "./searchTextField/SearchTextField";
+import { Container } from "./styles";
 
 export const HeaderHome: React.FC = () => {
     const theme = useTheme();
