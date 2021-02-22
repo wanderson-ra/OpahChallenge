@@ -3,6 +3,8 @@ import { isIphoneX } from "react-native-iphone-x-helper";
 import { heightPercentageToDP as height } from "react-native-responsive-screen";
 
 export const metrics = {
+    searchContainerHeight: height(10),
+
     font: {
         smallMicro: Platform.select({
             android: height(1.3),

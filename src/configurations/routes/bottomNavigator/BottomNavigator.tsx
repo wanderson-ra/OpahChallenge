@@ -6,7 +6,7 @@ import { useTheme } from "styled-components/native";
 import { strings } from "src/utils/strings";
 
 import { Home } from "src/screens/home/Home";
-import { Planets } from "src/screens/planets/Planets";
+import { ListPlanets } from "src/screens/planets/ListPlanets";
 
 import { HOME, PLANETS } from "src/globals/constants/screens";
 
@@ -36,7 +36,7 @@ export const BottomNavigator = (): React.ReactElement => {
             <BottomNavigatorStack.Screen
                 options={{ tabBarIcon: "earth", tabBarLabel: strings.bottomTabs.planets }}
                 name={PLANETS}
-                component={Planets}
+                component={ListPlanets}
             />
         </BottomNavigatorStack.Navigator>
     );

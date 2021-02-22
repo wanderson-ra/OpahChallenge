@@ -31,6 +31,10 @@ export const strings = new LocalizedStrings({
             account: "Conta",
         },
 
+        text: {
+            planetNotFound: "Não foram encontrados planetas.",
+        },
+
         placeholder: {
             search: "Pesquisar",
         },
@@ -66,6 +70,10 @@ export const strings = new LocalizedStrings({
             home: "Home",
             planets: "Planets",
             account: "Account",
+        },
+
+        text: {
+            planetNotFound: "Planets not found.",
         },
 
         placeholder: {
