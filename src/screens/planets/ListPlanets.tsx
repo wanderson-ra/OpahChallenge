@@ -35,7 +35,7 @@ export const ListPlanets: React.FC = () => {
                     <ErrorMessage
                         onPress={(): void => setToDefaultValueErrorMessageAndLoading()}
                         messageProps={{
-                            icon: "alert-circle-outline",
+                            icon: "cloud-alert",
                             message: errorMessage ? errorMessage : "",
                             buttonTitle: strings.button.tryAgain,
                         }}
