@@ -45,6 +45,7 @@ export const Planets: React.FC<PlanetsProps> = (planetsProps) => {
     return (
         <Container>
             <ListPlanets
+                testID={"Planets"}
                 data={planets ? planets : initialPlanets}
                 renderItem={(item): React.ReactElement => renderItem(item as ListRenderItemInfo<Planet>)}
                 keyExtractor={(_, index): string => String(index)}

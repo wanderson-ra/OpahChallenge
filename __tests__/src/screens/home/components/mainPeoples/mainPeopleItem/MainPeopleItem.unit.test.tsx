@@ -34,10 +34,11 @@ describe("Test of MainPeopleItem", () => {
     it("Test with action card and applyMarginRight to false", async () => {
         const people = peopleTemplateFull.build();
         const applyMarginRight = false;
+        const index = 0;
 
         const mainPeopleItem: renderer.ReactTestRenderer = renderer.create(
             <ThemeProvider theme={colorTheme.light}>
-                <MainPeopleItem applyMarginRight={applyMarginRight} people={people} />
+                <MainPeopleItem index={index} applyMarginRight={applyMarginRight} people={people} />
             </ThemeProvider>
         );
 

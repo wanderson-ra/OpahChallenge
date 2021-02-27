@@ -33,6 +33,7 @@ export const strings = new LocalizedStrings({
 
         text: {
             planetNotFound: "Não foram encontrados planetas.",
+            climate: "Clima",
         },
 
         placeholder: {
@@ -74,6 +75,7 @@ export const strings = new LocalizedStrings({
 
         text: {
             planetNotFound: "Planets not found.",
+            climate: "Climate",
         },
 
         placeholder: {

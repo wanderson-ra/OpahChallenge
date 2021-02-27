@@ -11,6 +11,8 @@ import { ANIMATION_DELAY_DURATION } from "src/globals/constants/animation";
 
 import { AnimatedView, Name, WrapperInformation, WrapperNameAndClimate, Climate } from "./styles";
 
+import { strings } from "../../../../utils/strings";
+
 interface PlanetItemProps {
     planet: Planet;
     index: number;
@@ -35,8 +37,8 @@ const View: React.FC<PlanetItemProps> = (patientItemProps) => {
                             {planet.name}
                         </Name>
 
-                        <Climate testID={"Email"} lineBreakMode={"tail"}>
-                            {`Clima: ${planet.climate}`}
+                        <Climate testID={"Climate"} lineBreakMode={"tail"}>
+                            {`${strings.text.climate}: ${planet.climate}`}
                         </Climate>
                     </WrapperNameAndClimate>
                 </WrapperInformation>

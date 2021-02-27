@@ -12,7 +12,6 @@ export const ListPlanets = styled.FlatList.attrs({
     contentContainerStyle: {
         paddingTop: height(5),
         paddingBottom: height(5),
-        testID: "planets",
         showsVerticalScrollIndicator: false,
         scrollEventThrottle: 1,
         onEndReachedThreshold: 0.1,

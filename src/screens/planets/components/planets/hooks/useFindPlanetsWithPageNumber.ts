@@ -15,7 +15,7 @@ export interface UseFindByPlantsWithPageNumberProps {
 }
 
 export function useFindByPlanetsWithPageNumber(): UseFindByPlantsWithPageNumberProps {
-    const [isLoading, setIsLoading] = useState<boolean>(true);
+    const [isLoading, setIsLoading] = useState<boolean>(false);
     const [planets, setPlanets] = useState<Array<Planet>>();
     const [isNotFoundError, setIsNotFoundError] = useState(false);
 
