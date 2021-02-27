@@ -1,4 +1,4 @@
-import { heightPercentageToDP as height, widthPercentageToDP as width } from "react-native-responsive-screen";
+import { heightPercentageToDP as height } from "react-native-responsive-screen";
 
 import styled from "styled-components/native";
 
