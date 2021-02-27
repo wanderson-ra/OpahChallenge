@@ -2,11 +2,14 @@ import React, { useCallback, useState, useRef, useEffect } from "react";
 import { ListRenderItemInfo, ActivityIndicator } from "react-native";
 import { heightPercentageToDP as height } from "react-native-responsive-screen";
 
+import { useTheme } from "styled-components/native";
+
 import { Planet } from "src/domains/planet";
+
+import { Conditional } from "src/components/conditional/Conditional";
 
 import { ListPlanets, Container } from "./styles";
 
-import { Conditional } from "../../../../components/conditional/Conditional";
 import { PlanetItem } from "../planetItem/PlanetItem";
 import { useFindByPlanetsWithPageNumber } from "./hooks/useFindPlanetsWithPageNumber";
 
@@ -15,6 +18,8 @@ interface PlanetsProps {
 }
 
 export const Planets: React.FC<PlanetsProps> = (planetsProps) => {
+    const theme = useTheme();
+
     const [pageNumber, setPageNumber] = useState(1);
 
     const { initialPlanets } = planetsProps;
@@ -41,21 +46,13 @@ export const Planets: React.FC<PlanetsProps> = (planetsProps) => {
     return (
         <Container>
             <ListPlanets
-                contentContainerStyle={{
-                    paddingTop: height(5),
-                    paddingBottom: height(5),
-                }}
-                testID={"planets"}
-                showsVerticalScrollIndicator={false}
-                scrollEventThrottle={1}
                 data={planets ? planets : initialPlanets}
                 renderItem={(item): React.ReactElement => renderItem(item as ListRenderItemInfo<Planet>)}
                 keyExtractor={(_, index): string => String(index)}
                 onEndReached={loadMorePlanets}
-                onEndReachedThreshold={0.1}
                 ListFooterComponent={
                     <Conditional when={isLoading}>
-                        <ActivityIndicator />
+                        <ActivityIndicator color={theme.primary} />
                     </Conditional>
                 }
             />
