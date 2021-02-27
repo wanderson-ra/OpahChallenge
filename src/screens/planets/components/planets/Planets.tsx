@@ -1,6 +1,5 @@
 import React, { useCallback, useState, useRef, useEffect } from "react";
 import { ListRenderItemInfo, ActivityIndicator } from "react-native";
-import { heightPercentageToDP as height } from "react-native-responsive-screen";
 
 import { useTheme } from "styled-components/native";
 
