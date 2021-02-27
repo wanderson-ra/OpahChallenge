@@ -15,8 +15,6 @@ export const ContainerLoadingItems = styled.ScrollView.attrs({
     contentContainerStyle: {
         justifyContent: "center",
         alignItems: "center",
-        paddingTop: height(5),
-        paddingBottom: height(5),
     },
 })`
     flex: 1;
@@ -32,4 +30,22 @@ export const LoadingItem = styled(ShimmerPlaceHolder).attrs((props) => ({
     align-items: center;
     border-radius: ${height(1)}px;
     margin-bottom: ${height(3)}px;
+`;
+
+export const ContainerLSearch = styled.View`
+    justify-content: center;
+    align-items: center;
+    padding-top: ${height(4)}px;
+    padding-bottom: ${height(4)}px;
+`;
+
+export const LoadingSearch = styled(ShimmerPlaceHolder).attrs((props) => ({
+    LinearGradient: LinearGradient,
+    width: width(90),
+    height: isIphoneX() ? height(5) : height(6),
+    shimmerColors: [props.theme.shimmer.container, props.theme.shimmer.color, props.theme.shimmer.container],
+}))`
+    justify-content: center;
+    align-items: center;
+    border-radius: ${height(1)}px;
 `;
