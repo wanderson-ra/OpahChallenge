@@ -12,12 +12,12 @@ import { Container } from "./styles";
 
 import { Loading } from "./components/loading/Loading";
 import { Planets } from "./components/planets/Planets";
-import { useFindByPageNumber } from "./hooks/useFindByPageNumber";
+import { useFindPlanets } from "./hooks/useFindPlanets";
 
 export const ListPlanets: React.FC = () => {
     const theme = useTheme();
 
-    const { data, errorMessage, isLoading, setToDefaultValueErrorMessageAndLoading } = useFindByPageNumber([]);
+    const { data, errorMessage, isLoading, setToDefaultValueErrorMessageAndLoading } = useFindPlanets();
 
     return (
         <>
@@ -28,7 +28,7 @@ export const ListPlanets: React.FC = () => {
                 </Conditional>
 
                 <Conditional when={!!data && !isLoading}>
-                    <Planets planets={data ? data : []} />
+                    <Planets initialPlanets={data ? data : []} />
                 </Conditional>
 
                 <Conditional when={!!errorMessage && !data && !isLoading}>

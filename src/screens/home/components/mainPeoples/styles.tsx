@@ -18,7 +18,6 @@ export const Container = styled.View`
     background-color: ${(props): string => props.theme.page.background};
     padding-left: ${width(4)}px;
     padding-right: ${width(4)}px;
-    height: ${height(25)}px;
 `;
 
 export const ListMainsPeople = styled.FlatList``;
@@ -28,7 +27,7 @@ export const Title = styled.Text.attrs({
     numberOfLines: 1,
 })`
     margin-top: ${height(1)}px;
-    margin-bottom: ${height(1)}px;
+    margin-bottom: ${height(2)}px;
     text-align: left;
     width: ${width(50)}px;
     font-size: ${metrics.font.medium}px;

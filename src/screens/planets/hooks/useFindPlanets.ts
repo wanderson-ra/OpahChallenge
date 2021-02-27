@@ -12,26 +12,20 @@ import { strings } from "src/utils/strings";
 
 import { BaseException } from "src/globals/exceptions/baseException";
 
-export interface UseFindByPageNumberProps {
+export interface UsePlanetsProps {
     setToDefaultValueErrorMessageAndLoading: () => void;
     isLoading: boolean;
     errorMessage: string | undefined;
-    data: Array<Planet>;
+    data: Array<Planet> | undefined;
 }
 
-export function useFindByPageNumber(
-    planetsAlreadyFinded: Array<Planet>,
-    pageNumber?: number
-): UseFindByPageNumberProps {
+export function useFindPlanets(): UsePlanetsProps {
     const [isLoading, setIsLoading] = useState<boolean>(true);
     const [errorMessage, setErrorMessage] = useState<string>();
 
-    const { data, error } = useSWR(
-        `${properties.startWars.baseUrl}/planets/${pageNumber ? pageNumber : ""}`,
-        async () => {
-            return await FindPlanetsByPageNumberUseCase.find(pageNumber);
-        }
-    );
+    const { data, error } = useSWR(`${properties.startWars.baseUrl}/planets/`, async () => {
+        return await FindPlanetsByPageNumberUseCase.find(undefined);
+    });
 
     const setToDefaultValueErrorMessageAndLoading = (): void => {
         setErrorMessage(undefined);
@@ -63,6 +57,6 @@ export function useFindByPageNumber(
         isLoading,
         errorMessage,
         setToDefaultValueErrorMessageAndLoading,
-        data: data ? [...planetsAlreadyFinded, ...data] : planetsAlreadyFinded,
+        data: data,
     };
 }

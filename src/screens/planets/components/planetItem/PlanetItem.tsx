@@ -9,7 +9,7 @@ import { Initials } from "src/components/initials/Initials";
 
 import { ANIMATION_DELAY_DURATION } from "src/globals/constants/animation";
 
-import { AnimatedView, Name, WrapperInformation, WrapperNameAndEmail, Email } from "./styles";
+import { AnimatedView, Name, WrapperInformation, WrapperNameAndClimate, Climate } from "./styles";
 
 interface PlanetItemProps {
     planet: Planet;
@@ -20,7 +20,7 @@ const View: React.FC<PlanetItemProps> = (patientItemProps) => {
     const { planet, index } = patientItemProps;
 
     return (
-        <AnimatedView delay={ANIMATION_DELAY_DURATION + index * 50} animation="fadeInLeft">
+        <AnimatedView delay={ANIMATION_DELAY_DURATION + index} animation="fadeInLeft">
             <CardAction hasShadow={false}>
                 <WrapperInformation>
                     <Initials
@@ -30,15 +30,15 @@ const View: React.FC<PlanetItemProps> = (patientItemProps) => {
                         borderRadius={isIphoneX() ? height(3) : height(4)}
                     />
 
-                    <WrapperNameAndEmail>
+                    <WrapperNameAndClimate>
                         <Name testID={"Name"} lineBreakMode={"tail"}>
                             {planet.name}
                         </Name>
 
-                        <Email testID={"Email"} lineBreakMode={"tail"}>
+                        <Climate testID={"Email"} lineBreakMode={"tail"}>
                             {`Clima: ${planet.climate}`}
-                        </Email>
-                    </WrapperNameAndEmail>
+                        </Climate>
+                    </WrapperNameAndClimate>
                 </WrapperInformation>
             </CardAction>
         </AnimatedView>

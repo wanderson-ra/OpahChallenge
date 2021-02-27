@@ -21,7 +21,7 @@ export const WrapperInformation = styled.View`
     align-items: center;
 `;
 
-export const WrapperNameAndEmail = styled.View`
+export const WrapperNameAndClimate = styled.View`
     margin-left: ${width(4)}px;
     height: ${isIphoneX() ? height(5) : height(7)}px;
     justify-content: space-around;
@@ -35,7 +35,7 @@ export const Name = styled.Text`
     width: ${width(60)}px;
 `;
 
-export const Email = styled.Text`
+export const Climate = styled.Text`
     color: ${(props): string => props.theme.font.primary};
     font-size: ${metrics.font.micro}px;
     font-weight: 300;
