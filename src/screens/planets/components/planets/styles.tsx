@@ -8,13 +8,6 @@ export const Container = styled.View`
     align-items: center;
 `;
 
-export const WrapperSearchText = styled.View`
-    justify-content: center;
-    align-items: center;
-    padding-top: ${height(4)}px;
-    padding-bottom: ${height(4)}px;
-`;
-
 export const ListPlanets = styled.FlatList.attrs({
     showsVerticalScrollIndicator: false,
     scrollEventThrottle: 1,
